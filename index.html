@@ -2069,10 +2069,13 @@
     </div>
 </div>
 <script>
-    var touchEventString = "<script>document.addEventListener('touchstart', {});<\/script>";
-    var $iframe = jQuery('#mainframe');
-    $iframe.ready(function() {
-        $iframe.contents().find("body").append(touchEventString);
+    var $ = jQuery;
+    $(function() {
+        var touchEventString = "<script>document.addEventListener('touchstart', {});<\/script>";
+        var $iframe = $('#mainframe');
+        $iframe.ready(function() {
+            $iframe.contents().find("body").append(touchEventString);
+        });
     });
 </script>
 </body>
